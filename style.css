@@ -1,0 +1,219 @@
+/*GLOBAL */
+
+a {
+	font-family: 'Montserrat Subrayada', sans-serif;
+	text-decoration: none;
+	color: transparent;
+	text-transform: uppercase;
+}
+
+/* HEADER */
+
+nav {
+	overflow-y:auto;
+	max-height: 700px;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 200px;
+	background-image: url(../images/fond.jpg);
+	background-size: cover;
+	background-position: center;
+
+}
+
+header, .admin, #link-list {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+#logo img {
+	width: 80px;
+	margin-top: 10px;
+}
+
+h2, h3, caption {
+	font-family: 'Kavivanar', cursive;
+}
+
+.admin a {
+	font-size: 0.8em;
+	}
+
+.link {
+	color: azure;
+}
+
+.hr {
+	border: 1px solid dimgray;
+	width: 90%;
+}
+
+#link-list {
+	padding-left: 0;
+	flex-wrap: nowrap;
+}
+
+#link-list li {
+	list-style-type: none;
+}
+
+#hello {
+	color: ivory;
+}
+
+#burger {
+	display: none;
+}
+
+/* MAIN */
+
+h1 {
+	font-family: 'Kavivanar', cursive;
+	color: ivory;
+	margin: 0;
+	text-align: center;
+	font-size: 3em;
+	text-transform: lowercase;
+	position: absolute;
+	top: 5px;
+	left: 50%;
+}
+
+body {
+	background-color: gainsboro;
+	text-align: center;
+	margin: auto;
+	font-family: 'EB Garamond', serif;
+	font-size: 1.8em;
+}
+
+fieldset {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	}
+
+fieldset input, fieldset textarea {
+	text-align: center;
+	margin: 5px auto;
+}
+
+main {
+	margin-left: 200px;
+}
+
+#chapter-list p {
+	text-align: justify;
+	width: 80%;
+	margin: auto;
+	margin-bottom: 21px;
+}
+
+#chapter-table a {
+	color: dimgray;
+	font-family: 'EB Garamond', serif;
+	font-size: 0.8em;
+	text-transform: lowercase;
+	margin-right: 10px;
+}
+
+#chapter-table {
+	width: 60%;
+	border-collapse: collapse;
+	margin: auto;
+}
+
+#chapter-table caption {
+	text-align: center;
+	font-weight: bolder;
+	font-size: 1.3em;
+	margin: 10px;
+	border-bottom: 1px solid dimgray;
+}
+
+#chapter-table i {
+	margin-right: 5px;
+}
+
+.hoverline:hover, .hoverline:hover i {
+	background-color: gray;
+	color: ivory;
+}
+
+/* PARALLAX */
+
+.slide {
+	height: 100px;
+	background: url(../images/fond.jpg) center 0 repeat fixed;
+	}
+
+/* FOOTER */
+
+footer {
+	position: fixed;
+	bottom: 0;
+	text-align: center;
+	width: 200px;
+	font-size: 0.8em;
+	}
+
+footer, footer a {
+	color: azure;
+}
+
+#chapter-list p::first-letter {
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+/* MEDIA */
+
+@media screen and (max-width: 1280px) {
+
+	#chaptitle, #chapcontent, #chapter-table {
+		width: 100%;
+	}
+
+}
+
+@media screen and (max-width: 800px) {
+
+	header, footer {
+		margin-left: -200px;
+	}
+
+	nav {
+		max-height: 200px;
+	}
+
+	main {
+		margin-left: 0px;
+	}
+
+	#burger {
+		display: block;
+		position: fixed;
+		top: 10px;
+		right: 10px;
+		width: 20px;
+		height: 20px;
+		padding: 0;
+		color: ivory;
+		background-size: cover;
+	}
+
+	.slide-menu {
+    	margin-left: 0px; 
+    }
+
+	.burger-color {
+		text-shadow: 0px 0px 2px black;
+	}
+}

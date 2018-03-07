@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shaptr</title>
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/normalize.css">
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/base.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- Feuilles de styles de l'application -->
+    <link rel="stylesheet" href="<?= $wwwUrl ?>/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada|Kavivanar|EB+Garamond" rel="stylesheet">
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous">
+    </script>
+<!--    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js"></script>-->
+    <!-- JavaScript de l'application -->
+    <script src="<?= $wwwUrl ?>/js/utilities.js"></script>
+</head>
+<body>
+<!-- En-tête commune -->
+<header class="haside">
+        <div id="burger"><i class="fa fa-bars" aria-hidden="true"></i></div>
+        <div id="logo">
+            <a href="<?= $requestUrl ?>">
+                <img src="<?= $wwwUrl ?>/images/logo-shapter-1.png">
+            </a>
+        </div>
+        <?php if(!isset($_SESSION["isConnected"])) : ?>
+        <div class="admin">
+            <a href="<?= $requestUrl ?>/admin" class="link"><i class="fa fa-file-text" aria-hidden="true"></i></a>
+        </div>
+        <?php endif; ?>
+        <?php if(isset($_SESSION["isConnected"])) : ?>
+        <div class="admin">
+            <span id="hello">Bonjour <?php echo $_SESSION["pseudo"]?> !</span>
+            <span><a href="<?= $requestUrl ?>/publish" class="link">Publier</a></span>
+            <span><a href="<?= $requestUrl ?>/modif" class="link">Modifier</a></span>
+            <span><a href="<?= $requestUrl ?>/logout" class="link">Déconnexion</a></span>
+        </div>
+        <?php endif; ?>
+            <hr class="hr">
+        <nav>
+            <ul id="link-list">
+            </ul>
+        </nav>
+</header>
+    <!-- Affichage du template lié à la vue -->
+<main>
+    <h1>shaptr.</h1>
+    <?php include $this->viewData['template'] ?>
+</main>
+<!-- Pied de page commun -->
+<footer class="faside">
+    <hr class="hr">
+    <div id="copyright">
+        <i class="fa fa-copyright" aria-hidden="true"></i><a href="" target = "_blank"> Benjamin Hanneton</a>
+    </div>
+</footer>
+<script src="<?= $wwwUrl ?>/js/main.js"></script>
+</body>
+</html>
