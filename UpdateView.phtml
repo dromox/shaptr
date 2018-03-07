@@ -1,0 +1,18 @@
+<div class="slide"></div>
+<div id="publish_form">
+    <h2>Modifiez votre chapitre</h2>
+    <form method="post" action="<?= $requestUrl ?>/update" >
+        <fieldset>
+            <textarea name="numero" id="chapnumber" placeholder="Numéro de chapitre" rows="1" cols="20"/><?php echo $chapters['chapter_number']?></textarea>
+
+            <textarea name="titre" id="chaptitle" rows="1" cols="100"/><?php echo $chapters['titre']?></textarea>
+
+            <textarea name="contenu" id="chapcontent" rows="20" cols="150"/><?php echo $chapters['contenu']?></textarea>
+
+            <input type="hidden" name="id" value="<?php echo $chapters['id']?>">
+        </fieldset>
+        <span class="boutons"><input type="submit" id="publish" value="Enregistrer"/><input type="reset" value="Effacer"/></span>
+    </form>
+</div>
+
+

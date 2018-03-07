@@ -1,0 +1,13 @@
+<div class="slide"></div>
+<table id="chapter-table">
+    <caption>Liste des chapitres</caption>
+    <tr><th>Numéro</th><th>Titre</th><th>Modifier</th><th>Supprimer</th></tr>
+    <?php foreach ($chapters as $chapter):  ?>
+    <tr class="hoverline">
+        <td><?php echo $chapter['chapter_number']?></td>
+        <td><?php echo $chapter['titre']?></td>
+        <td><a href="<?= $requestUrl?>/update?id=<?php echo $chapter['id']?>"><i class="fa fa-pencil" aria-hidden="true"></i></a></td>
+        <td><a href="<?= $requestUrl?>/erase?id=<?php echo $chapter['id']?>"><i class="fa fa-times" aria-hidden="true"></i></a></td>
+    </tr>
+    <?php endforeach; ?>
+</table>

@@ -1,0 +1,15 @@
+<div class="slide"></div>
+<div id="publish_form">
+<h2>Postez votre chapitre</h2>
+<form method="post" action="<?= $requestUrl ?>/publish" >
+    <fieldset>
+        <textarea name="numero" id="chapnumber" placeholder="Numéro de chapitre" rows="1" cols="20"/></textarea>
+
+        <textarea name="titre" id="chaptitle" placeholder="Rédiger votre titre" rows="1" cols="100"/></textarea>
+
+        <textarea name="contenu" id="chapcontent" placeholder="Rédiger votre chapitre" rows="20" cols="150"/></textarea>
+    </fieldset>
+    <span class="boutons"><input type="submit" id="publish" value="Enregistrer"/><input type="reset" value="Effacer"/></span>
+</form>
+</div>
+
